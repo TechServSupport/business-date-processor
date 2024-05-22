@@ -9,7 +9,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const FRESHDESK_DOMAIN = 'helptechserv';
-const API_KEY = 'bF1l8GuBYr8viKyCH4T';
+const API_KEY = '';
 
 app.use(bodyParser.json());
 
