@@ -48,7 +48,7 @@ async function processCsv(filePath) {
       fs.createReadStream(filePath)
         .pipe(csv())
         .on('data', (row) => {
-          if (!row.Name.includes("9999") && !row.Name.includes("LAB")) {
+          if (row.Name.includes("9999") || row.Name.includes("LAB")) {
             // Skip rows that don't contain "Sonny's BBQ 9999" or "LAB" in the Name column
             return;
           }
